@@ -1,16 +1,16 @@
 import React from 'react';
 
-const heroBanner = ()=>{
+const HeroBanner = ()=>{
     return(
         <div class="jumbotron">
-            <h1 class="display-4">Hello, world!</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <h1 class="display-4">Schedule Comparer</h1>
+            <p class="lead">This is a simple hero unit</p>
+            <p>Something about being productive</p>
             <p class="lead">
-                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                <a class="btn btn-primary btn-lg" href="/" role="button">Learn more</a>
             </p>
         </div>
     )
 };
 
-export default heroBanner;
+export default HeroBanner;
