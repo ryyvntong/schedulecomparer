@@ -1,13 +1,13 @@
 import React from 'react';
-import HeroBanner from 'components/HeroBanner/HeroBanner';
-import Features from 'components/Features/Features';
+import ScheduleContainer from 'containers/ScheduleContainer/ScheduleContainer';
+
 
 class ComparePage extends React.Component {
     render() {
         return (
             <div>
-            <p>OWO </p>
-
+            <ScheduleContainer />
+            {/*<OptionsBlock />*/}
             </div>
         );
     }
