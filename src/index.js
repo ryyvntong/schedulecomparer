@@ -4,36 +4,40 @@ import { Provider } from 'react-redux';
 import {BrowserRouter} from 'react-router-dom';
 import { createStore, applyMiddleware, compose, combineReducers,  } from 'redux';
 import createSagaMiddleware from 'redux-saga';
+import fileParserReducer from 'store/reducers/fileParser';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-// const composeEnhancers = process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null || compose;
+const composeEnhancers = process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null || compose;
 
-// const sagaMiddleware = createSagaMiddleware();
+const sagaMiddleware = createSagaMiddleware();
 
-// const rootReducer = combineReducers({
-// });
+const rootReducer = combineReducers({
+    fileParser: fileParserReducer
+});
 
-// const store = createStore(rootReducer, composeEnhancers (
-//     applyMiddleware(sagaMiddleware)
-// ));
+const store = createStore(rootReducer, composeEnhancers (
+    applyMiddleware(sagaMiddleware)
+));
 
-// sagaMiddleware.run();
+//const store = createStore(rootReducer);
 
-// const app = (
-//     <Provider store={store} >
-//         <BrowserRouter>
-//             <App />
-//         </BrowserRouter>
-//     </Provider>
-// );
+//sagaMiddleware.run();
 
 const app = (
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>
+    <Provider store={store} >
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </Provider>
 );
+
+// const app = (
+//     <BrowserRouter>
+//         <App />
+//     </BrowserRouter>
+// );
 
 // ReactDOM.render(app, document.getElementById('root'));
 
