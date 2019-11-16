@@ -1,0 +1,15 @@
+.Brand{
+    font-family: 'Big Shoulders Text', cursive;
+    letter-spacing: 0.05rem;
+    font-weight: bold;
+    color:white;
+}
+
+
+.NavItem{
+    color:pink;
+}
+
+.NavItem:hover{
+    color:white;
+}

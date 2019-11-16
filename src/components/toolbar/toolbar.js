@@ -5,7 +5,7 @@ import NavItems from './navItems/navItems'
 const toolbar=(props)=>{
     return(
 <header className={classes.Toolbar}>
-    <nav class="navbar navbar-expand-lg navbar-light" >
+    <nav class="navbar navbar-expand-lg navbar-light" style={{width:"100%"}}>
         <NavItems/>
     </nav>
 </header>
