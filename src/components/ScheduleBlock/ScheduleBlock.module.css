@@ -1,0 +1,13 @@
+.ScheduleBlock {
+    top: 30%;
+    left: 10%;
+    position: absolute;
+    text-align: center;
+}
+
+.Schedule {
+    width: 50vw;
+    height: 50vh;
+    background-color: black;
+    display: inline-block;
+}

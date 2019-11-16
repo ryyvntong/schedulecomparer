@@ -1,16 +1,24 @@
 import React from 'react';
-import HeroBanner from 'components/HeroBanner/HeroBanner';
-import Features from 'components/Features/Features';
+import { connect } from 'react-redux';
+import * as actions from 'store/actions/index';
+import ScheduleContainer from 'containers/ScheduleContainer/ScheduleContainer';
+
 
 class ComparePage extends React.Component {
     render() {
         return (
-            <div>
-            <p>OWO </p>
-
+            <div onClick={() => this.props.getSchedule()}>
+            <ScheduleContainer/>
+            {/*<OptionsBlock />*/}
             </div>
         );
     }
 }
 
-export default ComparePage;
+const mapDispatchToProps = dispatch => {
+    return {
+        getSchedule: (scheduleContent) => dispatch(actions.getSchedule(scheduleContent))
+    };
+};
+
+export default connect(null, mapDispatchToProps)(ComparePage);
