@@ -2,6 +2,10 @@ import React from 'react';
 import HeroBanner from 'components/HeroBanner/HeroBanner';
 import Features from 'components/Features/Features';
 import {Component} from 'react'
+import { connect } from 'react-redux';
+import * as actions from 'store/actions/index';
+import ScheduleContainer from 'containers/ScheduleContainer/ScheduleContainer';
+
 
 class ComparePage extends Component {
     constructor(props){
@@ -32,10 +36,15 @@ class ComparePage extends Component {
                 <button onClick={fileReader} type="button" class="btn btn-primary">Upload</button>
             <p>OWO </p>
             <p></p>
-
             </div>
         );
     }
 }
 
-export default ComparePage;
+const mapDispatchToProps = dispatch => {
+    return {
+        getSchedule: (scheduleContent) => dispatch(actions.getSchedule(scheduleContent))
+    };
+};
+
+export default connect(null, mapDispatchToProps)(ComparePage);

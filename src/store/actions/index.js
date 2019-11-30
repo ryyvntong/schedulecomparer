@@ -1,0 +1,3 @@
+export {
+    getSchedule
+} from './fileParser';
