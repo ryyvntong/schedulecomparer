@@ -24,6 +24,7 @@ class ComparePage extends Component {
             reader.onload=(event)=>{
                 // this.props.getSchedule(event.target.result)
                 console.log(event.target.result)
+                this.props.getSchedule(JSON.stringify(event.target.result));
             };
             return(
             reader.readAsText(file))}
