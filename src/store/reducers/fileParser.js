@@ -4,8 +4,7 @@ const initialState = {state: 'empty'};
 
 const getSchedule = (state, action) => {
     //Take the content of the file and return back an array for availabilities
-    debugger;
-    console.log('hi');
+    let availabilities = action.scheduleContent
     return state;
 };
 
